@@ -16,8 +16,8 @@ use _ to substitute an individual character
 `SELECT * FROM Movies WHERE name LIKE ‘Year%’`
 
 `IN` - used to specify a list of values to be included in the results
-<pre>```WHERE year_rank IN (1, 2, 3)
-WHERE artist IN (‘Madonna’, ‘Brithey’, ‘Beyonce’)```</pre>
+<pre>```sql WHERE year_rank IN (1, 2, 3)
+WHERE artist IN (‘Madonna’, ‘Brithey’, ‘Beyonce’)</pre>
 It is useful when used with a subquery: IN (SELECT ….)
 
 

@@ -17,7 +17,8 @@ use _ to substitute an individual character
 
 `IN` - used to specify a list of values to be included in the results
 ```sql WHERE year_rank IN (1, 2, 3)
-WHERE artist IN (‘Madonna’, ‘Brithey’, ‘Beyonce’)```
+WHERE artist IN (‘Madonna’, ‘Brithey’, ‘Beyonce’)
+```
 It is useful when used with a subquery: IN (SELECT ….)
 
 

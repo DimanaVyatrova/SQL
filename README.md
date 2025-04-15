@@ -11,9 +11,11 @@ Arithmetic can be performed with the operators `+`, `-`, `*`, `/`
 However, it can only be performed across values in columns in the same row. If arithmetic operations need to be performed across multiple rows, aggregate functions must be used.
 ### Logical Operators
 `LIKE` - used to match similar values rather than exact ones
-use % as a wildcard to represent any character or a set of characters
-use _ to substitute an individual character
-`SELECT * FROM Movies WHERE name LIKE ‘Year%’`
+- use `%` as a wildcard to represent any character or a set of characters
+- use `_` to substitute an individual character
+```sql
+SELECT * FROM Movies WHERE name LIKE ‘Year%’
+```
 
 `IN` - used to specify a list of values to be included in the results
 ```sql WHERE year_rank IN (1, 2, 3)
@@ -22,9 +24,13 @@ WHERE artist IN (‘Madonna’, ‘Brithey’, ‘Beyonce’)
 It is useful when used with a subquery: `IN (SELECT ….)`
 
 `BETWEEN`
-`WHERE year_rank BETWEEN 5 AND 10`
+```sql
+WHERE year_rank BETWEEN 5 AND 10
+```
 is the same as
-`WHERE year_rank >= 5 AND year_rank <= 10`
+```sql
+WHERE year_rank >= 5 AND year_rank <= 10
+```
 
 `IS NULL / IS NOT NULL` - can be used to check if a value, for example in a `WHERE` clause, in null or not null
 `WHERE artist IS NULL`
@@ -84,11 +90,11 @@ Counting distinct values
 SELECT COUNT(DISTINCT email) AS unique_emails
 FROM users;
 ```
-This will count the number of unique emails.
-, SUM, MIN, MAX, AVG
+This will count the number of unique emails.<br>
+SUM, MIN, MAX, AVG
 
 ### Other Statements & Expressions
-CASE, DISTINCT
+CASE, DISTINCT, ROUND, AS DECIMAL, add a hardcoded row
 
 ### Window Functions
 SUM(), AVG(), MIN(), MAX(), ROW_NUMBER(), RANK(), DENSE_RANK(), LEAD(), LAG(), NTILE(n)
@@ -96,4 +102,6 @@ SUM(), AVG(), MIN(), MAX(), ROW_NUMBER(), RANK(), DENSE_RANK(), LEAD(), LAG(), N
 ### Common Table Expression (CTE)
 
 ### Manipulate Date & Timestamp
+
+### Regular Expression
 
